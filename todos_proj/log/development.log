@@ -1,0 +1,217 @@
+  [1m[35m (764.4ms)[0m  [1m[35mCREATE DATABASE "todos_proj_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (255.0ms)[0m  [1m[35mCREATE DATABASE "todos_proj_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (263.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (31.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5958562432037446770)[0m
+  ↳ bin/rails:9
+  [1m[35m (11.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTodos (20190423213017)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (99.6ms)[0m  [1m[35mCREATE TABLE "todos" ("id" bigserial primary key, "title" character varying NOT NULL, "body" character varying NOT NULL, "done" boolean DEFAULT FALSE NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190423213017_create_todos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (79.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190423213017"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (15.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (16.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-23 21:33:40.234366"], ["updated_at", "2019-04-23 21:33:40.234366"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5958562432037446770)[0m
+  ↳ bin/rails:9
+  [1m[35m (25.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/var/rbenv/versions/2.5.0/bin/annotate:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (17.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "wash shoes"], ["body", "shine"], ["created_at", "2019-04-23 21:37:19.468603"], ["updated_at", "2019-04-23 21:37:19.468603"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTodo Load (40.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "wash duck"], ["body", "quack"], ["created_at", "2019-04-23 21:38:03.068873"], ["updated_at", "2019-04-23 21:38:03.068873"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Started GET "/" for ::1 at 2019-04-23 14:54:53 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/a75a972d0894f407/variables" for ::1 at 2019-04-23 14:54:54 -0700
+Started GET "/" for ::1 at 2019-04-23 14:57:52 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/989afd16e8e8fc2c/variables" for ::1 at 2019-04-23 14:57:52 -0700
+Started GET "/" for ::1 at 2019-04-23 14:57:55 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/a7365cf174368d93/variables" for ::1 at 2019-04-23 14:57:55 -0700
+Started GET "/" for ::1 at 2019-04-23 14:57:56 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/1dbc276d1f531930/variables" for ::1 at 2019-04-23 14:57:57 -0700
+Started GET "/" for ::1 at 2019-04-23 14:58:18 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/ff985007093c1cc2/variables" for ::1 at 2019-04-23 14:58:18 -0700
+Started GET "/" for ::1 at 2019-04-23 14:58:19 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/6e9057c95704648c/variables" for ::1 at 2019-04-23 14:58:19 -0700
+Started GET "/" for ::1 at 2019-04-23 14:59:51 -0700
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+    defaults: {format: :json}
+            ^
+/Users/appacademy/Desktop/W7D1/todos_proj/config/routes.rb:9: syntax error, unexpected keyword_end, expecting end-of-input:
+  config/routes.rb:4:in `'
+
+Started POST "/__better_errors/dfdc20ed215d0ea6/variables" for ::1 at 2019-04-23 14:59:51 -0700
+Started GET "/" for ::1 at 2019-04-23 15:00:50 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/feed7c22a96d3345/variables" for ::1 at 2019-04-23 15:00:52 -0700
+Started GET "/" for ::1 at 2019-04-23 15:04:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 505ms (ActiveRecord: 0.0ms)
+
+
+
+Sprockets::FileNotFound - couldn't find file 'jquery-ujs' with type 'application/javascript'
+Checked in these paths: 
+  /Users/appacademy/Desktop/W7D1/todos_proj/app/assets/config
+  /Users/appacademy/Desktop/W7D1/todos_proj/app/assets/images
+  /Users/appacademy/Desktop/W7D1/todos_proj/app/assets/javascripts
+  /Users/appacademy/Desktop/W7D1/todos_proj/app/assets/stylesheets
+  /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionview-5.2.3/lib/assets/compiled
+  /Users/appacademy/Desktop/W7D1/todos_proj/node_modules:
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___4162645249986864714_70187115061040'
+  app/controllers/static_pages_controller.rb:3:in `root'
+
+Started POST "/__better_errors/afcacff5edec2853/variables" for ::1 at 2019-04-23 15:04:16 -0700
+Started GET "/" for ::1 at 2019-04-23 15:05:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1378ms (Views: 1366.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-04-23 15:07:36 -0700
+
+SyntaxError - syntax error, unexpected '>'
+class TodosController > ApplicationController
+                      ^:
+  app/controllers/api/todos_controller.rb:1:in `'
+
+Started GET "/" for ::1 at 2019-04-23 15:09:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 474ms (Views: 473.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-04-23 15:09:27 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/appacademy/Desktop/W7D1/todos_proj/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/" for ::1 at 2019-04-23 15:10:52 -0700
+Processing by StaticPagesController#root as */*
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 263ms (Views: 262.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-23 15:11:31 -0700
+Processing by StaticPagesController#root as */*
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 96ms (Views: 95.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-23 15:11:43 -0700
+Processing by StaticPagesController#root as */*
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 103ms (Views: 102.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-04-23 15:11:52 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/appacademy/Desktop/W7D1/todos_proj/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/api/todos/1" for ::1 at 2019-04-23 15:12:51 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/appacademy/Desktop/W7D1/todos_proj/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/" for ::1 at 2019-04-23 15:18:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 345ms (Views: 344.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos/1" for ::1 at 2019-04-23 15:18:54 -0700
+Processing by Api::TodosController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:3
+Completed 200 OK in 87ms (Views: 18.0ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-04-23 15:19:39 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (27.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mTodo Create (1.0ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "go to the store"], ["body", "to get more soap"], ["created_at", "2019-04-23 22:22:19.101282"], ["updated_at", "2019-04-23 22:22:19.101282"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (10.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "wash your wallet"], ["body", "yes really"], ["created_at", "2019-04-23 22:22:19.115763"], ["updated_at", "2019-04-23 22:22:19.115763"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+Started GET "/" for ::1 at 2019-04-23 15:22:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 203ms (Views: 203.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-04-23 15:22:31 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+
+

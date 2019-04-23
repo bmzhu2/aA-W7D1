@@ -1,0 +1,2 @@
+module Apb::FakecontrollerHelper
+end
